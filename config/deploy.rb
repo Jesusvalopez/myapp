@@ -15,7 +15,7 @@ set :deploy_to, "/home/deploy/#{fetch :application}"
 # set :format, :airbrussh
 
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
-
+set :linked_files, %w{config/master.key}
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
